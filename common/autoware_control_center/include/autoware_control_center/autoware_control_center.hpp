@@ -19,6 +19,8 @@
 #include "autoware_control_center/visibility_control.hpp"
 #include "rclcpp_lifecycle/lifecycle_node.hpp"
 
+#include "autoware_control_center_msgs/msg/autoware_control_center_json.hpp"
+
 namespace autoware_control_center
 {
 
@@ -33,6 +35,12 @@ public:
     const std::string & node_name, const std::string & namespace_,
     const rclcpp::NodeOptions & options = rclcpp::NodeOptions(),
     bool enable_communication_interface = true);
+
+private:
+  using AutowareControlCenterJson = autoware_control_center_msgs::msg::AutowareControlCenterJson;
+  rclcpp::Subscription<AutowareControlCenterJson>::SharedPtr sub_global_;
+
+  void callback_acc_json_global(const AutowareControlCenterJson::ConstSharedPtr & msg);
 };
 
 }  // namespace autoware_control_center

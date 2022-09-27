@@ -17,12 +17,13 @@
 
 namespace autoware_control_center
 {
-
 AutowareControlCenter::AutowareControlCenter(
   const std::string & nodeName, const rclcpp::NodeOptions & options,
   bool enableCommunicationInterface)
 : LifecycleNode(nodeName, options, enableCommunicationInterface)
 {
+  // log info
+  RCLCPP_INFO(get_logger(), "AutowareControlCenter is initialized");
 }
 
 AutowareControlCenter::AutowareControlCenter(
@@ -30,6 +31,13 @@ AutowareControlCenter::AutowareControlCenter(
   const rclcpp::NodeOptions & options, bool enable_communication_interface)
 : LifecycleNode(node_name, namespace_, options, enable_communication_interface)
 {
+}
+
+void AutowareControlCenter::callback_acc_json_global(
+  const autoware_control_center_msgs::msg::AutowareControlCenterJson::ConstSharedPtr & msg)
+{
+  // log message
+  RCLCPP_INFO(get_logger(), "AutowareControlCenterJson received %s", msg->json_message.c_str());
 }
 
 }  // namespace autoware_control_center
