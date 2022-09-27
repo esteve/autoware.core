@@ -14,7 +14,9 @@
 // limitations under the License.
 
 #include "autoware_control_center/autoware_control_center.hpp"
+
 #include <rclcpp/rclcpp.hpp>
+
 #include <memory>
 
 int main(int argc, char * argv[])
