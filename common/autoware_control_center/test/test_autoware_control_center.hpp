@@ -13,11 +13,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef TEST_AUTOWARE_NODE_HPP_
-#define TEST_AUTOWARE_NODE_HPP_
+#ifndef TEST_AUTOWARE_CONTROL_CENTER_HPP_
+#define TEST_AUTOWARE_CONTROL_CENTER_HPP_
 
 class test_autoware_control_center
 {
 };
 
-#endif  // TEST_AUTOWARE_NODE_HPP_
+#endif  // TEST_AUTOWARE_CONTROL_CENTER_HPP_

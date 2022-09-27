@@ -13,8 +13,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef AUTOWARE_NODE__AUTOWARE_NODE_HPP_
-#define AUTOWARE_NODE__AUTOWARE_NODE_HPP_
+#ifndef AUTOWARE_CONTROL_CENTER__AUTOWARE_CONTROL_CENTER_HPP_
+#define AUTOWARE_CONTROL_CENTER__AUTOWARE_CONTROL_CENTER_HPP_
 
 #include "autoware_control_center/visibility_control.hpp"
 #include "rclcpp_lifecycle/lifecycle_node.hpp"
@@ -37,4 +37,4 @@ public:
 
 }  // namespace autoware_control_center
 
-#endif  // AUTOWARE_NODE__AUTOWARE_NODE_HPP_
+#endif  // AUTOWARE_CONTROL_CENTER__AUTOWARE_CONTROL_CENTER_HPP_

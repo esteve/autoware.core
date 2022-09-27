@@ -13,8 +13,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef AUTOWARE_NODE__VISIBILITY_CONTROL_HPP_
-#define AUTOWARE_NODE__VISIBILITY_CONTROL_HPP_
+#ifndef AUTOWARE_CONTROL_CENTER__VISIBILITY_CONTROL_HPP_
+#define AUTOWARE_CONTROL_CENTER__VISIBILITY_CONTROL_HPP_
 
 #include "rcutils/visibility_control_macros.h"
 
@@ -25,4 +25,4 @@
 #endif  // !AUTOWARE_CONTROL_CENTER_BUILDING_DLL
 #define AUTOWARE_CONTROL_CENTER_LOCAL RCUTILS_LOCAL
 
-#endif  // AUTOWARE_NODE__VISIBILITY_CONTROL_HPP_
+#endif  // AUTOWARE_CONTROL_CENTER__VISIBILITY_CONTROL_HPP_
