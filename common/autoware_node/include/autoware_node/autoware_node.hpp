@@ -27,14 +27,9 @@ class AutowareNode : public rclcpp_lifecycle::LifecycleNode
 public:
   AUTOWARE_NODE_PUBLIC
   AutowareNode(
-    const std::string & nodeName, const rclcpp::NodeOptions & options,
-    bool enable_communication_interface = true);
+    const std::string & node_name, const std::string & ns = "",
+    const rclcpp::NodeOptions & options = rclcpp::NodeOptions());
 
-  AUTOWARE_NODE_PUBLIC
-  AutowareNode(
-    const std::string & node_name, const std::string & namespace_,
-    const rclcpp::NodeOptions & options = rclcpp::NodeOptions(),
-    bool enable_communication_interface = true);
 };
 
 }  // namespace autoware_node

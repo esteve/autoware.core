@@ -16,8 +16,4 @@
 #ifndef TEST_AUTOWARE_NODE_HPP_
 #define TEST_AUTOWARE_NODE_HPP_
 
-class test_autoware_node
-{
-};
-
 #endif  // TEST_AUTOWARE_NODE_HPP_
