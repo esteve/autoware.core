@@ -16,35 +16,12 @@
 #ifndef TEST_NODE__VISIBILITY_CONTROL_HPP_
 #define TEST_NODE__VISIBILITY_CONTROL_HPP_
 
-// This logic was borrowed (then namespaced) from the examples on the gcc wiki:
-//     https://gcc.gnu.org/wiki/Visibility
-
-#if defined _WIN32 || defined __CYGWIN__
-#ifdef __GNUC__
-#define TEST_NODE_EXPORT __attribute__((dllexport))
-#define TEST_NODE_IMPORT __attribute__((dllimport))
+#include "rcutils/visibility_control_macros.h"
+#ifdef TEST_NODE_BUILDING_DLL
+#define TEST_NODE_PUBLIC RCUTILS_EXPORT
 #else
-#define TEST_NODE_EXPORT __declspec(dllexport)
-#define TEST_NODE_IMPORT __declspec(dllimport)
-#endif
-#ifdef TEST_NODE_BUILDING_LIBRARY
-#define TEST_NODE_PUBLIC TEST_NODE_EXPORT
-#else
-#define TEST_NODE_PUBLIC TEST_NODE_IMPORT
-#endif
-#define TEST_NODE_PUBLIC_TYPE TEST_NODE_PUBLIC
-#define TEST_NODE_LOCAL
-#else
-#define TEST_NODE_EXPORT __attribute__((visibility("default")))
-#define TEST_NODE_IMPORT
-#if __GNUC__ >= 4
-#define TEST_NODE_PUBLIC __attribute__((visibility("default")))
-#define TEST_NODE_LOCAL __attribute__((visibility("hidden")))
-#else
-#define TEST_NODE_PUBLIC
-#define TEST_NODE_LOCAL
-#endif
-#define TEST_NODE_PUBLIC_TYPE
-#endif
+#define TEST_NODE_PUBLIC RCUTILS_IMPORT
+#endif  // !TEST_NODE_BUILDING_DLL
+#define TEST_NODE_LOCAL RCUTILS_LOCAL
 
 #endif  // TEST_NODE__VISIBILITY_CONTROL_HPP_
