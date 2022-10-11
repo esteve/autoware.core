@@ -27,14 +27,7 @@ namespace autoware_control_center
 class AutowareControlCenter : public rclcpp_lifecycle::LifecycleNode
 {
 public:
-  AutowareControlCenter(
-    const std::string & nodeName, const rclcpp::NodeOptions & options,
-    bool enable_communication_interface = true);
-
-  AutowareControlCenter(
-    const std::string & node_name, const std::string & namespace_,
-    const rclcpp::NodeOptions & options = rclcpp::NodeOptions(),
-    bool enable_communication_interface = true);
+  AutowareControlCenter(const rclcpp::NodeOptions & options);
 
 private:
   using AutowareControlCenterJson = autoware_control_center_msgs::msg::AutowareControlCenterJson;
