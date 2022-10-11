@@ -22,7 +22,8 @@
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  auto autoware_control_center = std::make_shared<autoware_control_center::AutowareControlCenter>(rclcpp::NodeOptions());
+  auto autoware_control_center =
+    std::make_shared<autoware_control_center::AutowareControlCenter>(rclcpp::NodeOptions());
   rclcpp::executors::MultiThreadedExecutor exec;
   exec.add_node(autoware_control_center->get_node_base_interface());
   exec.spin();

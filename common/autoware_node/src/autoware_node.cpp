@@ -19,8 +19,7 @@ namespace autoware_node
 {
 
 AutowareNode::AutowareNode(
-  const std::string & node_name, const std::string & ns,
-  const rclcpp::NodeOptions & options)
+  const std::string & node_name, const std::string & ns, const rclcpp::NodeOptions & options)
 : LifecycleNode(node_name, ns, options)
 {
 }

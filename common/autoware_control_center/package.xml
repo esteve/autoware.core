@@ -10,9 +10,9 @@
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
   <buildtool_depend>autoware_cmake</buildtool_depend>
 
-  <depend>bondcpp</depend>
-  <depend>bond</depend>
   <depend>autoware_control_center_msgs</depend>
+  <depend>bond</depend>
+  <depend>bondcpp</depend>
   <depend>lifecycle_msgs</depend>
   <depend>nlohmann-json-dev</depend>
   <depend>rclcpp_components</depend>

@@ -13,12 +13,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef AUTOWARE_NODE__AUTOWARE_NODE_HPP_
-#define AUTOWARE_NODE__AUTOWARE_NODE_HPP_
+#ifndef TEST_NODE__TEST_NODE_HPP_
+#define TEST_NODE__TEST_NODE_HPP_
 
-#include "test_node/visibility_control.hpp"
-#include "rclcpp_lifecycle/lifecycle_node.hpp"
 #include "autoware_node/autoware_node.hpp"
+#include "rclcpp_lifecycle/lifecycle_node.hpp"
+#include "test_node/visibility_control.hpp"
 
 namespace test_node
 {
@@ -28,9 +28,8 @@ class TestNode : public autoware_node::AutowareNode
 public:
   TEST_NODE_PUBLIC
   explicit TestNode(const rclcpp::NodeOptions & options = rclcpp::NodeOptions());
-
 };
 
-}  // namespace autoware_node
+}  // namespace test_node
 
-#endif  // AUTOWARE_NODE__AUTOWARE_NODE_HPP_
+#endif  // TEST_NODE__TEST_NODE_HPP_

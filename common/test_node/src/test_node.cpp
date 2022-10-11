@@ -13,8 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "autoware_node/autoware_node.hpp"
 #include "test_node/test_node.hpp"
+
+#include "autoware_node/autoware_node.hpp"
 
 namespace test_node
 {
@@ -22,10 +23,9 @@ namespace test_node
 TestNode::TestNode(const rclcpp::NodeOptions & options)
 : autoware_node::AutowareNode("test_node", "", options)
 {
-
 }
 
-}  // namespace autoware_node
+}  // namespace test_node
 
 #include "rclcpp_components/register_node_macro.hpp"
 
