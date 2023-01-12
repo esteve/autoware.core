@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main-esteve
-  workflow_dispatch:
 
 jobs:
   generate-debian-packages:
