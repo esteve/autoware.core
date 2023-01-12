@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate-debs:
+  generate-debian-packges:
     uses: jspricke/ros-deb-builder-action@main
     with:
       ROS_DISTRO: rolling
