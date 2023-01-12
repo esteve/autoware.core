@@ -1,0 +1,15 @@
+name: generate-debs
+
+on:
+  push:
+    branches:
+      - main-esteve
+  workflow_dispatch:
+
+jobs:
+  generate-debs:
+    uses: jspricke/ros-deb-builder-action@main
+    with:
+      ROS_DISTRO: rolling
+      DEB_DISTRO: jammy
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
