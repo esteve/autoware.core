@@ -7,8 +7,10 @@ on:
 
 jobs:
   generate-debian-packages:
-    uses: jspricke/ros-deb-builder-action@main
-    with:
-      ROS_DISTRO: rolling
-      DEB_DISTRO: jammy
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: jspricke/ros-deb-builder-action@main
+      with:
+        ROS_DISTRO: rolling
+        DEB_DISTRO: jammy
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
